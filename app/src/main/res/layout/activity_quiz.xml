@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
@@ -12,15 +13,16 @@
     tools:context=".QuizActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
+        android:fontFamily="casual"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="12dp"
-        android:text="@string/question_text"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -49,5 +51,34 @@
             android:text="@string/false_button" />
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableLeft="@drawable/ic_back"
+            android:paddingStart="10dp"
+            android:textAlignment="viewEnd"
+            android:text="@string/back_btn_label"/>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/ic_next"
+            android:paddingStart="10dp"
+            android:textAlignment="viewStart"
+            android:text="@string/next_btn_label" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
